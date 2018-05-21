@@ -8,8 +8,7 @@ class MP3Importer
   end
 
   def files
-    @list_of_filenames = Dir.glob["#{path}/*.mp3"]   #Dir[self.path + "/*.mp3"]
-    binding.pry
+    @list_of_filenames = Dir[self.path + "/*.mp3"]
     @filenames = @list_of_filenames.each {|filename| filename.slice! self.path + "/"}
   end
 
