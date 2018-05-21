@@ -38,8 +38,8 @@ describe "MP3Importer" do
       music_importer.import
 
       expect(Artist.all.size).to eq(3)
-      expect(Artist.all.first.songs.empty? && Artist.all.last.songs.empty?).to eq(false)
       binding.pry
+      expect(Artist.all.first.songs.empty? && Artist.all.last.songs.empty?).to eq(false)
     end
   end
 end
